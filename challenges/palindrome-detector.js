@@ -23,7 +23,8 @@
 // YOUR CODE HERE
 function isPalindrome(input) {
   var lowerCase = input.toLowerCase();
-  var noSpace = lowerCase.replace(/\s+/g, '');
+  var noPunctuation = lowerCase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  var noSpace = noPunctuation.replace(/\s+/g, '');
   var output = noSpace.split("").reverse().join("");
   return noSpace === output;
 }
