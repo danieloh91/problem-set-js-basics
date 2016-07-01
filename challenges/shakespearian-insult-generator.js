@@ -23,22 +23,13 @@ var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skain
 var all_words = first_word.concat(second_word, third_word);
 var randomNumber = Math.floor(Math.random() * (all_words.length - 1));
 
-
-var first = Math.floor(Math.random() * (first_word.length - 1));
-var second = Math.floor(Math.random() * (second_word.length - 1));
-var third = Math.floor(Math.random() * (third_word.length - 1));
-
-var insultArray = [first_word[first], second_word[second], third_word[third]];
-
-function generateInsult(num) {
-  for (i=0;i<num;i++){
-    return insultArray[i];
-  }
-  // return insultArray;
+function generateInsult() {
+  return all_words[randomNumber];
 }
 
 function generateInsults(num) {
+  // var output = [];
   for (i = 0; i < num; i++) {
-    return insultArray;
+    return generateInsult(i);
   }
 }

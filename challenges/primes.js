@@ -31,4 +31,5 @@ function primes(max) {
       output.push(i);
     }
   return output;
+
 }
