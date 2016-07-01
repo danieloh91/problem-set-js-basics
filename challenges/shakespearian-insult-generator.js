@@ -19,15 +19,18 @@ var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skain
 // YOUR CODE HERE
 // function generateInsult
 
-//ask if this is meant to generate n lines of the 3 insults or 1 array of n insults
+//generate 1 array of n insults
 
 var first = Math.floor(Math.random() * (first_word.length - 1));
 var second = Math.floor(Math.random() * (second_word.length - 1));
 var third = Math.floor(Math.random() * (third_word.length - 1));
 
+var insultArray = [first_word[first], second_word[second], third_word[third]];
+
 function generateInsult() {
   return 'You ' + first_word[first] + second_word[second] + third_word[third] + ' you!';
 }
+
 
 function generateInsults(num) {
   for (i = 0; i < num; i++) {

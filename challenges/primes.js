@@ -30,10 +30,3 @@ function primes(max) {
     }
   return output;
 }
-
-// function lengths(array) {
-//     for (i=0; i<array.length; i++){
-//        array[i] = array[i].length;
-//     }
-//     return array;
-// }
