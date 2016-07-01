@@ -28,12 +28,11 @@ var third = Math.floor(Math.random() * (third_word.length - 1));
 var insultArray = [first_word[first], second_word[second], third_word[third]];
 
 function generateInsult() {
-  return 'You ' + first_word[first] + second_word[second] + third_word[third] + ' you!';
+  return insultArray;
 }
-
 
 function generateInsults(num) {
   for (i = 0; i < num; i++) {
-    return generateInsult();
+    return insultArray;
   }
 }
