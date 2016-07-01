@@ -17,19 +17,29 @@ var second_word = ["weather-bitten", "unchin-snouted", "toad-spotted", "tickle-b
 var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skainsmate", "scut", "ratsbane", "pumpion", "puttock", "pignut", "pigeon-egg", "nut-hook", "mumble-news", "moldwarp", "miscreant", "minnow", "measle", "mammet", "malt-worm", "maggot-pie", "lout", "lewdster", "joithead", "hugger-mugger", "horn-beast", "hedge-pig", "harpy", "haggard", "gudgeon", "giglet", "fustilarian", "foot-licker", "flirt-gill", "flax-wench", "flap-dragon", "dewberry", "death-token", "codpiece", "coxcomb", "clotpole", "clack-dish", "canker-blossom", "bum-bailey", "bugbear", "boar-pig", "bladder", "barnacle", "baggage", "apple-john"];
 
 // YOUR CODE HERE
-// function generateInsult
 
-//generate 1 array of n insults
+//Insult Generator
+var first = Math.floor(Math.random() * (first_word.length - 1));
+var second = Math.floor(Math.random() * (second_word.length - 1));
+var third = Math.floor(Math.random() * (third_word.length - 1));
+
+function insultGenerator() {
+  return 'You ' + first_word[first] + second_word[second] + third_word[third] + ' you!';
+}
+
+
+//Bonuses
 var all_words = first_word.concat(second_word, third_word);
-var randomNumber = Math.floor(Math.random() * (all_words.length - 1));
 
 function generateInsult() {
-  return all_words[randomNumber];
+    var randomNumber = Math.floor(Math.random() * (all_words.length - 1));
+    return all_words[randomNumber];
 }
 
 function generateInsults(num) {
-  // var output = [];
+  var output = [];
   for (i = 0; i < num; i++) {
-    return generateInsult(i);
+     output.push(generateInsult());
   }
+  return output;
 }
